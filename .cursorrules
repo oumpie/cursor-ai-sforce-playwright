@@ -1,0 +1,101 @@
+# Project Cursor Rules
+
+## Core Testing Principles
+- Write atomic, independent tests that can run in isolation
+- Follow AAA pattern (Arrange, Act, Assert) for test structure
+- Implement proper test data cleanup in afterEach/afterAll hooks
+- Use data generators instead of hardcoded test data
+- Handle asynchronous operations properly with await
+
+## Code Organization
+### Directory Structure
+- `/pages` - Page Object Models
+- `/tests` - Test Specifications by domain
+- `/utils` - Shared Utilities and Helpers
+- `/types` - TypeScript Type Definitions
+- `/config` - Environment Configurations
+- `/services` - API and Authentication Services
+
+### File Naming
+- `*.page.ts` - Page Object files
+- `*.spec.ts` - Test specification files
+- `*.types.ts` - Type definition files
+- `*.config.ts` - Configuration files
+- `*.service.ts` - Service layer files
+
+## TypeScript Best Practices
+- Use interfaces for object shapes and API contracts
+- Prefer type unions over enums for finite sets of values
+- Implement proper error handling with custom error types
+- Use generics for reusable components
+- Maintain strict type checking (no any)
+
+## Playwright Specific
+- Use built-in assertions from @playwright/test
+- Implement proper waiting strategies (waitForSelector, waitForResponse)
+- Handle dynamic elements with proper locator strategies
+- Utilize test fixtures for common setup
+- Implement proper screenshot and trace capture
+
+## Salesforce Testing
+- Handle dynamic Lightning components properly
+- Implement proper session management
+- Use proper selectors for Lightning components
+- Handle Salesforce-specific loading states
+- Implement regional user context switching
+
+## Page Object Model
+- Extend BasePage for common functionality
+- Keep page-specific logic isolated
+- Implement chainable methods for better readability
+- Use meaningful method names that reflect business actions
+- Handle loading states and transitions
+
+## Test Data Management
+- Use data generators for test data creation
+- Implement proper cleanup mechanisms
+- Handle regional data requirements
+- Maintain data isolation between tests
+- Use typed interfaces for data structures
+
+## Error Handling
+- Implement custom error classes for different scenarios
+- Add proper error messages with context
+- Handle timeouts gracefully
+- Implement retry mechanisms for flaky operations
+- Capture proper diagnostics on failure
+
+## Authentication
+- Handle OAuth flows properly
+- Implement session reuse where possible
+- Handle regional user authentication
+- Maintain proper security practices
+- Handle token refresh scenarios
+
+## Configuration Management
+- Use environment variables for sensitive data
+- Implement proper configuration by environment
+- Handle regional configurations
+- Maintain separate configs for different test types
+- Use TypeScript for configuration files
+
+## Reporting
+- Implement proper test reporting
+- Capture relevant test artifacts
+- Maintain proper logging
+- Handle test failures gracefully
+- Implement proper CI/CD integration
+
+## Performance Considerations
+- Implement parallel test execution properly
+- Handle resource cleanup
+- Optimize page load waits
+- Implement proper test isolation
+- Handle browser context properly
+
+## Documentation
+- Maintain proper JSDoc comments
+- Document complex test scenarios
+- Maintain proper README files
+- Document regional considerations
+- Keep setup instructions updated

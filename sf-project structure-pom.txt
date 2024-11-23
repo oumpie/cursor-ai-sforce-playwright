@@ -1,0 +1,43 @@
+salesforce-tests/
+├── config/
+│   ├── roaUsers.config.ts
+│   └── environment.config.ts
+├── pages/
+│   ├── base/
+│   │   └── BasePage.ts
+│   ├── common/
+│   │   └── LoginPage.ts
+│   ├── sales/
+│   │   ├── AccountPage.ts
+│   │   ├── LeadPage.ts
+│   │   └── OpportunityPage.ts
+│   ├── service/
+│   │   └── CasePage.ts
+│   └── fsc/
+│       └── InsurancePolicyPage.ts
+├── tests/
+│   ├── sales/
+│   │   ├── createAccount.spec.ts
+│   │   ├── createLead.spec.ts
+│   │   └── createOpportunity.spec.ts
+│   ├── service/
+│   │   └── createServiceCase.spec.ts
+│   ├── fsc/
+│   │   └── createInsurancePolicy.spec.ts
+│   └── roa/
+│       ├── roaUserAccess.spec.ts
+│       └── createRegionalServiceCase.spec.ts
+├── types/
+│   ├── auth.types.ts
+│   ├── insurance.types.ts
+│   ├── lead.types.ts
+│   ├── region.types.ts
+│   └── service.types.ts
+├── utils/
+│   ├── dataGenerator.ts
+│   └── testHelper.ts
+├── services/
+│   └── AuthService.ts
+├── package.json
+├── playwright.config.ts
+└── .env

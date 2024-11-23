@@ -1,0 +1,75 @@
+# Node dependencies
+node_modules/
+# Prevents committing heavy dependency files that can be reinstalled via npm install
+
+# Environment variables
+.env
+.env.*
+!.env.example
+# Protects sensitive credentials and environment-specific configurations
+# Keeps example env file for reference
+
+# Playwright specific
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+# Excludes test execution artifacts, reports, and Playwright cache
+# These are generated during test runs and shouldn't be version controlled
+
+# Test artifacts
+screenshots/
+videos/
+traces/
+# Excludes visual test artifacts that can be regenerated
+# Saves repository space and prevents large binary files
+
+# Coverage reports
+coverage/
+# Excludes test coverage reports that are generated during test execution
+
+# IDE specific
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+# Excludes IDE specific files while keeping shared IDE configurations
+
+# OS specific
+.DS_Store
+Thumbs.db
+# Excludes operating system generated files
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Excludes various log files that are generated during development/testing
+
+# TypeScript
+*.tsbuildinfo
+dist/
+# Excludes TypeScript compilation artifacts and build output
+
+# Temporary files
+*.tmp
+*.temp
+.history/
+# Excludes temporary files and VS Code history
+
+# Salesforce specific
+.sfdx/
+.sf/
+# Excludes Salesforce CLI generated files
+
+# Package files
+package-lock.json
+yarn.lock
+# Include only one lock file based on your team's preferred package manager
+# In this case, we're keeping package-lock.json in version control
+
+# Test data
+test-data/generated/
+# Excludes generated test data that can be recreated 
